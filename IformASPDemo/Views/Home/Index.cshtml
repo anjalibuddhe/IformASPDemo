@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+@using (Html.BeginForm())
+{
+    <p>
+        <label>Enter Your name</label>
+        @Html.TextBox("username")
+    </p>
+
+    <p>
+        <label>Select Gender</label>
+        @Html.RadioButton("gender","male","male")Male
+        @Html.RadioButton("gender","female","female")Female
+    </p>
+    <p>
+        <label>Select Hobbies</label>
+        <input type="checkbox" name="hobbies" value="Sports" />Sports
+        <input type="checkbox" name="hobbies" value="Music" />Music
+    </p>
+
+    <p>
+        <label>Select City</label>
+        @Html.DropDownList("cities")
+    </p>
+
+    <p>
+        <label>Select City</label>
+        @Html.ListBox("cities")
+    </p>
+    <p>
+        <label>Your comments</label>
+        @Html.TextArea("comments")
+    </p>
+
+    <input type="submit" value="Save"/>
+}
+
+
